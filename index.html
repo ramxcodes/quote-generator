@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en-GB' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<title>Quote Generator by ram</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='' name='theme-color'/>
+<meta content='' name='msapplication-navbutton-color'/>
+<meta content='blogger' name='generator'/>
+
+<link rel="alternate" type="application/atom+xml" title="Quote Generator - Atom" href="https://blogpediachatting0099.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Quote Generator - RSS" href="https://blogpediachatting0099.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Quote Generator - Atom" href="https://www.blogger.com/feeds/3906783257059251613/posts/default" />
+<link rel="me" href="https://www.blogger.com/profile/03003492602308243557" />
+<meta content='https://blogpediachatting0099.blogspot.com/' property='og:url'/>
+<meta content='Quote Generator' property='og:title'/>
+<meta content='' property='og:description'/>
+<style id='page-skin-1' type='text/css'><!--
+body {
+margin: 0;
+}
+.quote-container {
+height: 100vh;
+width: 100%;
+background: #001219;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: "Poppins", sans-serif;
+padding: 48px;
+box-sizing: border-box;
+}
+.quote-container .quote {
+max-width: 700px;
+position: relative;
+}
+.quote-container .quote-icon {
+position: absolute;
+left: -76px;
+top: -48px;
+transform: scale(1.5) rotateZ(5deg);
+opacity: 0.1;
+}
+.quote-container{
+font-weight: bold;
+font-size: 40px;
+color: #fff;
+}
+.quote-content {
+font-weight: bold;
+font-size: 20px;
+color: #fff;
+}
+.quote-container .quote-author {
+font-size: 18px;
+color: yellow;
+border-top: 1px solid #93e0ff;
+padding: 16px 32px;
+margin-top: 20px;
+}
+.quote-container .new-quote-btn {
+padding: 16px 36px;
+position: fixed;
+bottom: 36px;
+left: 50%;
+transform: translateX(-50%);
+border: 1px solid #303030;
+background: #212121;
+color: #f3f3b2;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 15px;
+overflow: hidden;
+transition: 0.2s;
+border-radius: 20px;
+cursor: pointer;
+font-weight: bold;
+}
+.quote-container .new-quote-btn:hover {
+box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+transition-delay: 0.6s;
+}
+.quote-container .new-quote-btn span {
+position: absolute;
+}
+.quote-container .new-quote-btn span:nth-child(1) {
+top: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(90deg, transparent, #ae00ff);
+}
+.quote-container .new-quote-btn:hover span:nth-child(1) {
+left: 100%;
+transition: 0.7s;
+}
+.quote-container .new-quote-btn span:nth-child(3) {
+bottom: 0;
+right: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(90deg, transparent, #001eff);
+}
+.quote-container .new-quote-btn:hover span:nth-child(3) {
+right: 100%;
+transition: 0.7s;
+transition-delay: 0.35s;
+}
+.quote-container .new-quote-btn span:nth-child(2) {
+top: -100%;
+right: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(180deg, transparent, #ae00ff);
+}
+.quote-container .new-quote-btn:hover span:nth-child(2) {
+top: 100%;
+transition: 0.7s;
+transition-delay: 0.17s;
+}
+.quote-container .new-quote-btn span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(360deg, transparent, #001eff);
+}
+.quote-container .new-quote-btn:hover span:nth-child(4) {
+bottom: 100%;
+transition: 0.7s;
+transition-delay: 0.52s;
+}
+.quote-container .new-quote-btn:active {
+background: #ae00af;
+background: linear-gradient(to top right, #ae00af, #001eff);
+color: #bfbfbf;
+box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+transition: 0.1s;
+}
+.quote-container .new-quote-btn:active span:nth-child(1)
+span:nth-child(2)
+span:nth-child(2)
+span:nth-child(2) {
+transition: none;
+transition-delay: none;
+}
+
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body#layout .hidden,
+body#layout .invisible {
+display: inherit;
+}
+body#layout .navigation {
+display: none;
+}
+body#layout .page {
+display: inline-block;
+vertical-align: top;
+width: 55%;
+}
+body#layout .sidebar-container {
+display: inline-block;
+float: right;
+width: 40%;
+}
+body#layout .hamburger-menu,
+body#layout .search {
+display: none;
+}
+
+#footer {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    right: 30px;
+    bottom: 30px;
+}
+
+#footer a {
+    /* Add the following styles to adjust the link appearance */
+    color: #1A2A30;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+--></style>
+<script async='async' src='https://www.gstatic.com/external_hosted/clipboardjs/clipboard.min.js'></script>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body>
+<div class='header no-items section' id='www.jobianstechie.tk'></div>
+<div class='quote-container'>
+<div class='quote'>
+<div class='quote-icon'>
+<svg fill='none' height='75' viewBox='0 0 98 75' width='98' xmlns='http://www.w3.org/2000/svg'>
+<path d='M33.8 32.6C37.5333 34.3333 40.4 36.9333 42.4 40.4C44.5333 43.7333 45.6 47.6667 45.6 52.2C45.6 58.8667 43.4667 64.2667 39.2 68.4C34.9333 72.5333 29.4667 74.6 22.8 74.6C16.1333 74.6 10.6667 72.5333 6.4 68.4C2.13333 64.2667 0 58.8667 0 52.2C0 49.1333 0.4 46.0667 1.2 43C2 39.9333 3.8 35.4 6.6 29.4L19.4 0H43.2L33.8 32.6ZM86.2 32.6C89.9333 34.3333 92.8 36.9333 94.8 40.4C96.9333 43.7333 98 47.6667 98 52.2C98 58.8667 95.8667 64.2667 91.6 68.4C87.3333 72.5333 81.8667 74.6 75.2 74.6C68.5333 74.6 63.0667 72.5333 58.8 68.4C54.5333 64.2667 52.4 58.8667 52.4 52.2C52.4 49.1333 52.8 46.0667 53.6 43C54.4 39.9333 56.2 35.4 59 29.4L71.8 0H95.6L86.2 32.6Z' fill='white'></path>
+</svg>
+</div>
+<div class='quote-content'>Loading Quote...<br/><br/> Created By Ram</div>
+<div class='quote-author'></div>
+<button class='new-quote-btn'>
+<span></span>
+<span></span>
+<span></span>
+<span></span> New Quote
+        </button>
+</div>
+</div>
+<p id="footer">
+        Made with 💖 <a href="https://ramxcodes.github.io/portfolio/" target="_blank"><span style="color: #02d81e; "><b>Ram</b></span></a>
+    </p>
+
+<script>
+    
+       const quoteContent = document.querySelector(".quote-container .quote-content");
+const quoteAuthor = document.querySelector(".quote-container .quote-author");
+const newQuoteButton = document.querySelector(
+  ".quote-container .new-quote-btn"
+);
+
+const updateQuote = (data) => {
+  quoteContent.innerHTML = data.content;
+  quoteAuthor.innerHTML = data.author;
+};
+
+const nextQuote = () => {
+  fetch("https://api.quotable.io/random?maxLength=100")
+    .then((response) => response.json())
+    .then((data) => {
+      updateQuote(data);
+    });
+};
+
+nextQuote();
+
+newQuoteButton.addEventListener("click", nextQuote);
+    </script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/3846609440-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY6mFtChEeq_KekX4Pa1dVFSf17nAA:1690184972872';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3906783257059251613','//blogpediachatting0099.blogspot.com/','3906783257059251613');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3906783257059251613', 'title': 'Quote Generator', 'url': 'https://blogpediachatting0099.blogspot.com/', 'canonicalUrl': 'https://blogpediachatting0099.blogspot.com/', 'homepageUrl': 'https://blogpediachatting0099.blogspot.com/', 'searchUrl': 'https://blogpediachatting0099.blogspot.com/search', 'canonicalHomepageUrl': 'https://blogpediachatting0099.blogspot.com/', 'blogspotFaviconUrl': 'https://blogpediachatting0099.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Quote Generator - Atom\x22 href\x3d\x22https://blogpediachatting0099.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Quote Generator - RSS\x22 href\x3d\x22https://blogpediachatting0099.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Quote Generator - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/3906783257059251613/posts/default\x22 /\x3e\n', 'meTag': '\x3clink rel\x3d\x22me\x22 href\x3d\x22https://www.blogger.com/profile/03003492602308243557\x22 /\x3e\n', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/2cd8558181fb0639', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'blitzPostInterstitial': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'Quote Generator'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'Ok', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Quote Generator', 'description': '', 'url': 'https://blogpediachatting0099.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}, {'name': 'widgets', 'data': [{'title': 'Total Pageviews', 'type': 'Stats', 'sectionId': 'www.jobianstechie.tk', 'id': 'Stats1'}, {'title': 'Quote Generator (Header)', 'type': 'Header', 'sectionId': 'www.jobianstechie.tk', 'id': 'Header1'}]}]);
+_WidgetManager._RegisterWidget('_StatsView', new _WidgetInfo('Stats1', 'www.jobianstechie.tk', document.getElementById('Stats1'), {'title': 'Total Pageviews', 'showGraphicalCounter': false, 'showAnimatedCounter': false, 'showSparkline': true, 'statsUrl': '//blogpediachatting0099.blogspot.com/b/stats?style\x3dBLACK_TRANSPARENT\x26timeRange\x3dALL_TIME\x26token\x3dAPq4FmCmTiB0gK-ddzFeRHCFV-y6G_ShsX5oFW6bqhfQRUPycPbLRK77mIMXLqKVvHI0grolBghlbEUttkcKnJb0I8iutHRvMA'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'www.jobianstechie.tk', document.getElementById('Header1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>
